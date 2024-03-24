@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lab.c                                              :+:      :+:    :+:   */
+/*   memtree_get.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 12:13:29 by bhildebr          #+#    #+#             */
-/*   Updated: 2024/03/01 16:59:27 by bhildebr         ###   ########.fr       */
+/*   Created: 2024/01/17 13:26:10 by bhildebr          #+#    #+#             */
+/*   Updated: 2024/03/15 19:28:14 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_i32	main(/* copy from ft_name */)
-{
-	framework_setup();
-	push_swap(args);
-	framework_teardown();
-}
+#include "memtree.h"
 
-int	lab(void)
+t_memtree	*memtree_get(void)
 {
-	framework_init();
-	framework_destroy();
-	loopinrange(42, 0, just_do_it);
-	return (0);
+	static t_memtree	memtree = NULL;
+
+	return (&memtree);
 }
